@@ -6,11 +6,11 @@ public class DelimiterFactory {
 
     public static Delimiter create(final String input) {
         Delimiter defaultDelimiter = new DefaultDelimiter(input);
-        Delimiter customDelimiter = new CustomDelimiter(input);
-
         if (defaultDelimiter.matches()) {
             return defaultDelimiter;
         }
+
+        Delimiter customDelimiter = new CustomDelimiter(input);
         if (customDelimiter.matches()) {
             return customDelimiter;
         }

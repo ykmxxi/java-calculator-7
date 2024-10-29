@@ -13,7 +13,7 @@ public class CustomDelimiter implements Delimiter {
     private static final Pattern CUSTOM = Pattern.compile("//(.)+\\\\n(.)*");
     private static final String CUSTOM_DELIMITER_PREFIX = "//";
     private static final String CUSTOM_DELIMITER_SUFFIX = "\\\\n";
-    private static final int MIN_LENGTH_THRESHOLD = 0;
+    private static final int MIN_LENGTH_THRESHOLD = 1;
     private static final int MAX_LENGTH_THRESHOLD = 3;
     private static final String QUOTE_PREFIX = "\\Q";
     private static final String QUOTE_SUFFIX = "\\E";
@@ -83,7 +83,8 @@ public class CustomDelimiter implements Delimiter {
 
     private String getCustomDelimiter(final List<String> splitInput) {
         return Pattern.quote(splitInput.getFirst()
-                .replaceAll(CUSTOM_DELIMITER_PREFIX, ""));
+                .substring(CUSTOM_DELIMITER_PREFIX.length())
+        );
     }
 
     private boolean hasOnlyDelimiter(final List<String> numbers) {
