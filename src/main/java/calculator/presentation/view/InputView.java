@@ -22,7 +22,7 @@ public class InputView {
 
     private void validateNull(final String input) {
         if (input == null) {
-            throw new IllegalArgumentException("시스템 오류로 프로그램을 종료합니다. 다시 실행해 주세요");
+            throw new RuntimeException("시스템 오류로 프로그램을 종료합니다. 다시 실행해 주세요");
         }
     }
 
