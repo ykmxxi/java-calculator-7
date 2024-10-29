@@ -1,4 +1,4 @@
-package calculator.view;
+package calculator.presentation.view;
 
 import java.math.BigInteger;
 import java.text.NumberFormat;

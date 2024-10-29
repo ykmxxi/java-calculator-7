@@ -1,16 +1,16 @@
-package calculator.controller;
+package calculator.presentation;
 
 import java.math.BigInteger;
 
 import calculator.service.AdditionService;
-import calculator.view.InputView;
-import calculator.view.OutputView;
+import calculator.presentation.view.InputView;
+import calculator.presentation.view.OutputView;
 
-public class AdditionController {
+public class AdditionClient {
 
     private final AdditionService additionService;
 
-    public AdditionController(final AdditionService additionService) {
+    public AdditionClient(final AdditionService additionService) {
         this.additionService = additionService;
     }
 
