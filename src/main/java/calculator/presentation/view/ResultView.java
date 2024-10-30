@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class OutputView {
+public class ResultView {
 
     public void printTotal(final BigInteger total) {
         NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.KOREA);

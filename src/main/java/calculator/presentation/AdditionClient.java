@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 import calculator.service.AdditionService;
 import calculator.presentation.view.InputView;
-import calculator.presentation.view.OutputView;
+import calculator.presentation.view.ResultView;
 
 public class AdditionClient {
 
@@ -28,8 +28,8 @@ public class AdditionClient {
     }
 
     private void printAdditionResult(final BigInteger total) {
-        OutputView outputView = new OutputView();
-        outputView.printTotal(total);
+        ResultView resultView = new ResultView();
+        resultView.printTotal(total);
     }
 
 }
